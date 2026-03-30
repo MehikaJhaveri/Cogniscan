@@ -1,0 +1,54 @@
+{
+  "expo": {
+    "name": "CogniScan",
+    "slug": "cogniscan",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": false,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0F1729"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "CogniScan needs microphone access to record speech for cognitive assessment.",
+        "NSCameraUsageDescription": "CogniScan needs camera access to capture facial expressions for analysis."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0F1729"
+      },
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO",
+        "VIBRATE"
+      ],
+      "package": "com.cogniscan.app"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-secure-store",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "CogniScan needs camera access to capture facial expressions for analysis."
+        }
+      ],
+      [
+        "expo-av",
+        {
+          "microphonePermission": "CogniScan needs microphone access to record speech for cognitive assessment."
+        }
+      ]
+    ]
+  }
+}
